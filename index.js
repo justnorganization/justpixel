@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const bot = new AoiClient({
     token: process.env.TOKEN,
-    prefix: "$getServerVar[prefix]",
+    prefix: "p!",
     intents: ["MessageContent", "Guilds", "GuildMessages"],
     events: ["onMessage", "onInteractionCreate"],
     database: {
@@ -14,10 +14,10 @@ const bot = new AoiClient({
         extraOptions: {
             dbType: "KeyValue"
         }
-    }, // Example refers to @akarui/aoi.db, other databases are not included in this Example.
+    },
     fetchInvites: {
-        cacheInviters : true,
-        enabled : true,
+        cacheInviters: true,
+        enabled: true,
     },
     suppressAllErrors: false,
     errorMessage: true,
@@ -34,4 +34,9 @@ loader.load(bot.cmd, "./commands/")
 
 bot.variables({
     prefix: "p!"
+})
+
+bot.status({
+    type: "WATCHING",
+    text: "GitHub - justnorganization/justpixel"
 })

@@ -1,5 +1,6 @@
 module.exports = [{
     name: "eval",
-    code: `$onlyForIDs[$clientOwnerID;no.]
-    $eval[$message]`
+    code: `
+    $eval[$message]
+    $onlyForIDs[$clientOwnerIDs;no.]`
 }]

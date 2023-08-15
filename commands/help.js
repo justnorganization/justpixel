@@ -1,4 +1,6 @@
 module.exports = [{
     name: "help",
-    code: `help`
+    type: "interaction",
+    prototype: "slash",
+    code: `$interactionReply[help]`
 }]
