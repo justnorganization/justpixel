@@ -1,5 +1,4 @@
 const { AoiClient, LoadCommands } = require("aoi.js");
-const {Panel} = require("@akarui/aoi.panel")
 require('dotenv').config()
 
 const bot = new AoiClient({
@@ -32,25 +31,6 @@ const bot = new AoiClient({
 
 const loader = new LoadCommands(bot);
 loader.load(bot.cmd, "./commands/")
-
-const panel = new Panel({
-    port: 3000,
-    client: bot
-})
-
-panel.loadAPI({
-    auth: " Authentication key here (random string)"
-})
-
-panel.loadGUI({
-    username: "justmammt",
-    password: "mariop2009",
-})
-
-bot.command({
-    name: "ping",
-    code: `Pong! $pingms`
-});
 
 bot.variables({
     prefix: "p!"
