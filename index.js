@@ -40,3 +40,10 @@ bot.status({
     type: "WATCHING",
     text: "GitHub - justnorganization/justpixel"
 })
+
+bot.command({
+    name:"createCommands",
+    code:`
+    $createApplicationCommand[global;help;Get bot's command list;true;slash]
+    $onlyForIDs[$clientOwnerIDs;no sufficient permission]`
+})
