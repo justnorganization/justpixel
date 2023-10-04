@@ -42,6 +42,10 @@ client.on('ready', () => {
 	});
 });
 
+client.on('error', (error) => {
+	console.error('Unhandled error:', error);
+});
+
 
 
 client.login(process.env.TOKEN);

@@ -1,8 +1,5 @@
 # General-purpose Moderation bot
 
-Feel free to use bot source code, do NOT resell it as yours.
-
-
 # Installation
 - Download NPM Requirements
 ``` sh
