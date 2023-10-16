@@ -2,6 +2,6 @@
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
-    "undici": "^5.25.4"
+    "undici": "^5.26.2"
   }
 }
